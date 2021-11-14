@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>article - Homework</title>
+</head>
+
+<body>
+
+    <h1>
+        Please fill the form
+    </h1>
+
+    <h2>
+        Creating new article
+    </h2>
+
+    <form method="GET" action="./serverSimulation.html">
+
+        <div>
+           <label for="creator">Article by:</label> 
+            <input 
+            name="articleCreator" id="creator"
+            type="text" />
+        </div>
+        <br>
+
+        <div>
+            Article title:
+            <input 
+            name="articleTitle" 
+            type="text" />
+        </div>
+        <br>
+
+        <div>
+            Select picture:
+            <input 
+            name="mainPicture" 
+            type="file"/>
+        </div>
+        <br>
+
+        <div>
+            Article body:
+            <textarea 
+            name="articleBody" 
+            id="" cols="25" 
+            rows="2"
+            ></textarea>
+        </div>
+        <br>
+
+        <div>
+            Image position:
+            <br>
+            Left:
+            <input 
+            name="imagePosition" 
+            type="radio"/>
+            <br>
+            Right:
+            <input 
+            name="imagePosition" 
+            type="radio" />
+        </div>
+        
+        <br>
+
+        <div>
+            Show data:
+            <input 
+            name="hasDate" 
+            type="checkbox"/>
+        </div>
+
+        <div>
+            Use two columns:
+            <input 
+            name="useTwoColumns" 
+            type="checkbox">
+        </div>
+        <br>
+        
+        <div>
+            <input type="submit">
+        </div>
+
+    </form>
+
+</body>
+
+</html>               
