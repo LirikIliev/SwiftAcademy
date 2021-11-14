@@ -1,0 +1,98 @@
+/* Style of the header */
+
+body {
+  background-color: rgb(65, 65, 65);
+  color: white;
+  font-size: 16;
+}
+
+h1 {
+  color: #f56702;
+  font-size: 25px;
+  text-shadow: cyan;
+}
+
+/* Style of the text */
+
+p {
+  text-align: justify;
+}
+
+/* Style of the images*/
+
+.textBox {
+  font-weight: bolder;
+}
+
+/* Style of the first breadCrumbs*/
+
+.breadcrumbs1 {
+  padding: 20px;
+  font-family: "Roboto" sans-serif;
+  font-size: 17px;
+}
+
+.breadcrumbs1__item {
+  display: inline-block;
+}
+
+.breadcrumbs1__item:not(:last-of-type)::after {
+  content: "";
+  margin: 250px;
+}
+
+.breadcrumbs1__link {
+  text-decoration: none;
+  color: rgb(5, 163, 236);
+}
+
+.breadcrumbs1__link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs1__link--active {
+  color: #09c929;
+  font-weight: 600;
+}
+
+/* Style of the second breadCrumbs*/
+
+.breadcrumbs2 {
+  padding: 20px;
+  font-family: "Roboto" sans-serif;
+  font-size: 17px;
+}
+
+.breadcrumbs2__item {
+  display: inline-block;
+}
+
+.breadcrumbs2__item:not(:last-of-type)::after {
+  content: "\203a";
+  margin: 05px;
+}
+
+.breadcrumbs2__link {
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(0, 174, 255);
+}
+
+.breadcrumbs2__link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs2__link--active {
+  color: #09c929;
+  font-weight: 500;
+}
+
+/* Style of the footer and links*/
+
+a {
+  color: rgb(5, 163, 236);
+}
+
+.unorderedTableBootomOfThePage {
+  font-size: 16px;
+}

@@ -1,0 +1,33 @@
+body {
+  background-color: #34495e;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 5px 150px;
+}
+h1{
+  margin: 15px 60px;
+}
+table {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  margin: 15px 70px;
+  padding: 2px 5px;
+}
+table img {
+  height: 130px;
+  padding: 2px 5px;
+}
+table .paragraf {
+  font-size: 16px;
+  font-weight: bold;
+}
+table .otherInfo {
+  font-size: 15px;
+  text-align: left;
+  font-weight: lighter;
+}
+table .fullName {
+  font-size: 20px;
+  font-weight: bold;
+}

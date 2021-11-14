@@ -1,0 +1,21 @@
+body{
+    background-color:darkslategray;
+    color: white;
+}
+h1{
+    color: orangered;
+}
+#articleMainKeyWord{
+    font-size: 30px;
+    color: gold;
+}
+
+.keyWord{
+    color: gold;
+    font-style: italic;
+}
+
+p{
+    text-align: justify;
+}
+
