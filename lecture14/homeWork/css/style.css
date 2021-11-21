@@ -1,0 +1,73 @@
+.calcWrapper{
+    position: fixed;
+    height: 370px;
+    width: 210px;
+    top:calc(50% - 185px);
+    left: calc(50% - 105px);
+
+    padding: 20px;
+    border: 8px solid darkgray;
+    border-radius: 8%;
+    background-color:#34495e;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calcButton{
+    float: left;
+    height: 20px;
+    width: 60px;
+    padding:15px 0 20px 0;
+    margin-right: 9.5px;; 
+    background-color: #fff;
+    color: #34495e;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 500ms ease-in-out;
+    border-radius: 20%;
+}
+
+.calcButton:nth-child('3n'){
+    margin-right: 0;
+}
+
+.calcButton:hover{
+    background-color: #8e1abc;
+    color: #fff;
+}
+.addButtons{
+    float: left;
+    height: 20px;
+    width: 60px;
+    padding:15px 0 20px 0;
+    margin-right: 9.5px;; 
+    background-color: #27ae60;
+    color: #ffff;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 500ms ease-in-out;
+    border-radius: 20%;
+}
+.addButtons:hover{
+    background-color: rgb(0, 255, 255);
+    color: black; 
+}
+
+.calcSignWrapper .calcButton:hover{
+    background-color: rgb(0, 255, 255);
+    color: black;
+}
+
+.calcSignWrapper{
+    float:left;
+    width: 100%;
+}
+
+.calcSignWrapper .calcButton{
+background-color: #27ae60;
+color:#fff;
+font-size: 20px;
+}

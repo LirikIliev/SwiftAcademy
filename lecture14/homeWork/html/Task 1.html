@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="calcWrapper">
+        <div>
+            <div class="calcButton" onclick=" onNumberClick(1)">1</div>
+            <div class="calcButton" onclick=" onNumberClick(2)">2</div>
+            <div class="calcButton" onclick=" onNumberClick(3)">3</div>
+            <div class="calcButton" onclick=" onNumberClick(4)">4</div>
+            <div class="calcButton" onclick=" onNumberClick(5)">5</div>
+            <div class="calcButton" onclick=" onNumberClick(6)">6</div>
+            <div class="calcButton" onclick=" onNumberClick(7)">7</div>
+            <div class="calcButton" onclick=" onNumberClick(8)">8</div>
+            <div class="calcButton" onclick=" onNumberClick(9)">9</div>
+            <div class="addButtons">
+                <div class="additionalyButtons" onclick="onMultyply()">x</div>
+            </div>
+            <div class="calcButton" onclick="onNumberClick(0)">0</div>
+            <div class="addButtons additionalyBut">
+                <div class="additionalyButtons" onclick="onDivision()">/</div>
+            </div>
+        </div>
+        <div class="calcSignWrapper">
+            <div class="calcButton" onclick="onSumWithPlus()">+</div>
+            <div class="calcButton" onclick="onSubstrac()">-</div>
+            <div class="calcButton" onclick="onPrintButton()">=</div>
+        </div>
+    </div>
+
+    <script>
+        var isSumWithPlus = false,
+            isSubstraction = false,
+            isMultyplication = false,
+            isDivision = false,
+            numA = '',
+            numB = '';
+
+        function onNumberClick(number) {
+            number = String(number);
+
+            if (isSumWithPlus || isSubstraction || isMultyplication || isDivision) {
+                numB += number
+                document.title = Number(numB)
+            }
+            else {
+                numA += number
+                document.title = Number(numA)
+            }
+        }
+
+        function onSumWithPlus(number) {
+            isSumWithPlus = true;
+        }
+
+        function onSubstrac(number) {
+            isSubstraction = true;
+        }
+        function onMultyply(number) {
+            isMultyplication = true;
+        }
+        function onDivision(number){
+            isDivision = true;
+        }
+
+        function onPrintButton(number) {
+            if (isSumWithPlus) {
+                document.title = Number(numA) + Number(numB);
+            }
+
+            if (isSubstraction) {
+                document.title = Number(numA) - Number(numB);
+            }
+            if (isMultyplication){
+                document.title = Number(numA) * Number(numB);
+            }
+            if(isDivision){
+                document.title = Number(numA) / Number(numB);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
