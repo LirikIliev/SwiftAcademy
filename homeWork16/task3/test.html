@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phone number validation</title>
+
+    <style>
+        .mainBox {
+            display: inline-block;
+            position: relative;
+        }
+
+        #demo {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .buttonToCheck {
+            margin-left: 15px;
+            height: 25px;
+        }
+
+        #myInput {
+            margin-left: 90px;
+            min-height: 19px;
+            width: 75px;
+        }
+    </style>
+</head>
+
+<body class="clicking">
+
+    <div class="mainBox">
+        <p>Въведете телефонен номер в празното поле по-долу!</p>
+        <input type="text" type="number" id="myInput">
+        <button class="buttonToCheck">Проверка</button>
+        <div id="check"><br>
+            <span class="text"></span>
+            <span id="demo"></span>
+        </div>
+    </div>
+
+    <script>
+        let check = document.getElementById("myInput").value;
+        let button = document.querySelector(".buttonToCheck");
+        button.addEventListener("click", myFunction);
+        // let clickAnywhere = document.querySelector(".clicking");
+        // clickAnywhere.addEventListener("click", myFunction);
+
+        function myFunction() {
+            check = Number(document.getElementById("myInput").value);
+            let checkL = document.getElementById("myInput").value.length;
+            if ((!isNaN(check)) && checkL === 10) {
+                document.querySelector(".text").innerHTML = "Телефонния номер е:";
+                document.getElementById("demo").innerHTML = check;
+                document.querySelector(".buttonToCheck").style.background = "green";
+                document.getElementById("myInput").style.display = "none";
+                document.querySelector(".buttonToCheck").style.marginLeft = "150px";
+            }
+            else if (isNaN(check) || checkL < 10 && checkL > 0 || checkL > 10) {
+
+                if (isNaN(check)) {
+                    document.querySelector(".text").innerHTML = "Телефонния номер е:";
+                    document.getElementById("demo").innerHTML = "Невалиден - Съдържа непозволени символи!";
+                    document.querySelector(".buttonToCheck").style.background = "red";
+                }
+                else if (checkL > 10) {
+                    document.querySelector(".text").innerHTML = "Телефонния номер е:";
+                    document.getElementById("demo").innerHTML = "Невалиден - трябва да е, не повече от 10 цифри!";
+                    document.querySelector(".buttonToCheck").style.background = "red";
+                }
+                else {
+                    document.querySelector(".text").innerHTML = "Телефонния номер е:";
+                    document.getElementById("demo").innerHTML = "Невалиден - трябва да е, не по-малко от 10 цифри!";
+                    document.querySelector(".buttonToCheck").style.background = "red";
+                }
+            }
+            else if (checkL === 0) {
+                document.querySelector(".text").innerHTML = ""
+                document.getElementById("demo").innerHTML = "Реда е празен, моля въведете вашият телефонен номер.";
+                document.querySelector(".buttonToCheck").style.background = "red";
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>
